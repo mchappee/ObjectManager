@@ -1,0 +1,28 @@
+Feature List 
+                                                                                                                                                                   
+ Multiple Concurrent Connections allows you to administer many databases from one
+ window
+
+ Supported database objects include tables, indexes, triggers, sequences, synonyms, views,
+ procedures, functions, types, datafiles, tablespaces, database links, redo logs, packages,
+ rollback segments, users, and roles
+
+ Create any of the supported objects in an intuitive Gui environment
+
+ Alter any of the supported objects in an intuitive Gui environment
+
+ PL/SQL and SQL syntax highlighting and error checking
+
+ Table data export as HTML, SQL, CSV, tab delimited, and just about anything else
+
+ Detailed information about all of the supported objects
+
+ Support for Oracle 7.3, 8.0.x, and 8.1.x (8i)
+
+ Open Source for the power of peer review
+
+ Commercially supported to meet your business needs
+
+
+The above was blantantly ripped from the advantio web page.
+

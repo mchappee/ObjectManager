@@ -1,0 +1,5 @@
+gcc -shared export_postscript.c -o libom_postscript.so `gtk-config --cflags`
+strip libom_postscript.so
+file libom_postscript.so
+cp libom_postscript.so $HOME/.orasoft/exportlibs/
+

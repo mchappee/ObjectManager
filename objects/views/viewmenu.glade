@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<GTK-Interface>
+
+<project>
+  <name>viewmenu</name>
+  <program_name>viewmenu</program_name>
+  <directory></directory>
+  <source_directory>.</source_directory>
+  <pixmaps_directory>pixmaps</pixmaps_directory>
+  <language>C</language>
+  <gnome_support>False</gnome_support>
+  <gettext_support>True</gettext_support>
+  <use_widget_names>False</use_widget_names>
+  <output_main_file>False</output_main_file>
+  <output_support_files>False</output_support_files>
+  <output_build_files>False</output_build_files>
+  <backup_source_files>True</backup_source_files>
+  <main_source_file>interface.c</main_source_file>
+  <main_header_file>interface.h</main_header_file>
+  <handler_source_file>callbacks.c</handler_source_file>
+  <handler_header_file>callbacks.h</handler_header_file>
+  <support_source_file>support.c</support_source_file>
+  <support_header_file>support.h</support_header_file>
+  <translatable_strings_file></translatable_strings_file>
+</project>
+
+<widget>
+  <class>GtkMenu</class>
+  <name>viewmenu</name>
+
+  <widget>
+    <class>GtkMenuItem</class>
+    <name>vw_refresh</name>
+    <tooltip>Refresh the view info display</tooltip>
+    <signal>
+      <name>activate</name>
+      <handler>on_view_refresh_activate</handler>
+      <data>data</data>
+      <last_modification_time>Thu, 20 Jan 2000 11:55:26 GMT</last_modification_time>
+    </signal>
+    <label>_Refresh</label>
+    <right_justify>False</right_justify>
+  </widget>
+
+  <widget>
+    <class>GtkMenuItem</class>
+    <name>vw_create</name>
+    <tooltip>Create new view</tooltip>
+    <signal>
+      <name>activate</name>
+      <handler>on_view_create_activate</handler>
+      <data>data</data>
+      <last_modification_time>Thu, 20 Jan 2000 11:56:02 GMT</last_modification_time>
+    </signal>
+    <label>_Create</label>
+    <right_justify>False</right_justify>
+  </widget>
+
+  <widget>
+    <class>GtkMenuItem</class>
+    <name>vw_delete</name>
+    <tooltip>Drop view from database</tooltip>
+    <signal>
+      <name>activate</name>
+      <handler>on_view_delete_activate</handler>
+      <data>data</data>
+      <last_modification_time>Thu, 20 Jan 2000 11:56:09 GMT</last_modification_time>
+    </signal>
+    <label>_Delete</label>
+    <right_justify>False</right_justify>
+  </widget>
+
+  <widget>
+    <class>GtkMenuItem</class>
+    <name>vw_rename</name>
+    <tooltip>Rename view</tooltip>
+    <signal>
+      <name>activate</name>
+      <handler>on_view_rename_activate</handler>
+      <data>data</data>
+      <last_modification_time>Thu, 20 Jan 2000 11:56:41 GMT</last_modification_time>
+    </signal>
+    <label>Re_name</label>
+    <right_justify>False</right_justify>
+  </widget>
+
+  <widget>
+    <class>GtkMenuItem</class>
+    <name>vw_separator1</name>
+    <right_justify>False</right_justify>
+  </widget>
+
+  <widget>
+    <class>GtkMenuItem</class>
+    <name>vw_export</name>
+    <tooltip>Export data from view</tooltip>
+    <label>_Export</label>
+    <right_justify>False</right_justify>
+
+    <widget>
+      <class>GtkMenu</class>
+      <name>vw_export_menu</name>
+
+      <widget>
+	<class>GtkMenuItem</class>
+	<name>vw_export_csv</name>
+	<tooltip>Export data from view as a csv file</tooltip>
+	<signal>
+	  <name>activate</name>
+	  <handler>on_view_export_csv_activate</handler>
+          <data>data</data>
+	  <last_modification_time>Thu, 20 Jan 2000 12:00:08 GMT</last_modification_time>
+	</signal>
+	<label>csv</label>
+	<right_justify>False</right_justify>
+      </widget>
+
+      <widget>
+	<class>GtkMenuItem</class>
+	<name>vw_export_html</name>
+	<tooltip>Export data from view as an html table</tooltip>
+	<signal>
+	  <name>activate</name>
+	  <handler>on_view_export_html_activate</handler>
+          <data>data</data>
+	  <last_modification_time>Thu, 20 Jan 2000 12:00:14 GMT</last_modification_time>
+	</signal>
+	<label>html</label>
+	<right_justify>False</right_justify>
+      </widget>
+
+      <widget>
+	<class>GtkMenuItem</class>
+	<name>vw_export_sql</name>
+	<tooltip>Export data from view as a sql script</tooltip>
+	<signal>
+	  <name>activate</name>
+	  <handler>on_view_export_sql_activate</handler>
+          <data>data</data>
+	  <last_modification_time>Thu, 20 Jan 2000 12:02:13 GMT</last_modification_time>
+	</signal>
+	<label>sql</label>
+	<right_justify>False</right_justify>
+      </widget>
+    </widget>
+  </widget>
+
+  <widget>
+    <class>GtkMenuItem</class>
+    <name>vw_script</name>
+    <tooltip>Save SQL definition of view to file</tooltip>
+    <signal>
+      <name>activate</name>
+      <handler>on_view_script_activate</handler>
+      <data>data</data>
+      <last_modification_time>Thu, 20 Jan 2000 11:59:17 GMT</last_modification_time>
+    </signal>
+    <label>_Script</label>
+    <right_justify>False</right_justify>
+  </widget>
+</widget>
+
+</GTK-Interface>

@@ -1,0 +1,1006 @@
+<?xml version="1.0"?>
+<GTK-Interface>
+
+<project>
+  <name>Project14</name>
+  <program_name>project14</program_name>
+  <directory></directory>
+  <source_directory>src</source_directory>
+  <pixmaps_directory>pixmaps</pixmaps_directory>
+  <language>C</language>
+  <gnome_support>False</gnome_support>
+  <gettext_support>True</gettext_support>
+  <use_widget_names>False</use_widget_names>
+  <output_main_file>True</output_main_file>
+  <output_support_files>True</output_support_files>
+  <output_build_files>True</output_build_files>
+  <backup_source_files>True</backup_source_files>
+  <main_source_file>interface.c</main_source_file>
+  <main_header_file>interface.h</main_header_file>
+  <handler_source_file>callbacks.c</handler_source_file>
+  <handler_header_file>callbacks.h</handler_header_file>
+  <support_source_file>support.c</support_source_file>
+  <support_header_file>support.h</support_header_file>
+  <translatable_strings_file></translatable_strings_file>
+</project>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>window1</name>
+  <title>window1</title>
+  <type>GTK_WINDOW_TOPLEVEL</type>
+  <position>GTK_WIN_POS_NONE</position>
+  <modal>False</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkVBox</class>
+    <name>vbox1</name>
+    <homogeneous>False</homogeneous>
+    <spacing>0</spacing>
+
+    <widget>
+      <class>GtkNotebook</class>
+      <name>notebook1</name>
+      <can_focus>True</can_focus>
+      <show_tabs>True</show_tabs>
+      <show_border>True</show_border>
+      <tab_pos>GTK_POS_TOP</tab_pos>
+      <scrollable>False</scrollable>
+      <tab_hborder>2</tab_hborder>
+      <tab_vborder>2</tab_vborder>
+      <popup_enable>False</popup_enable>
+      <child>
+	<padding>0</padding>
+	<expand>True</expand>
+	<fill>True</fill>
+      </child>
+
+      <widget>
+	<class>GtkVBox</class>
+	<name>vbox2</name>
+	<homogeneous>False</homogeneous>
+	<spacing>0</spacing>
+
+	<widget>
+	  <class>GtkFixed</class>
+	  <name>fixed1</name>
+	  <child>
+	    <padding>0</padding>
+	    <expand>True</expand>
+	    <fill>True</fill>
+	  </child>
+
+	  <widget>
+	    <class>GtkEntry</class>
+	    <name>entry1</name>
+	    <x>152</x>
+	    <y>8</y>
+	    <width>184</width>
+	    <height>22</height>
+	    <can_focus>True</can_focus>
+	    <editable>True</editable>
+	    <text_visible>True</text_visible>
+	    <text_max_length>0</text_max_length>
+	    <text></text>
+	  </widget>
+
+	  <widget>
+	    <class>GtkLabel</class>
+	    <name>label3</name>
+	    <x>56</x>
+	    <y>8</y>
+	    <width>96</width>
+	    <height>24</height>
+	    <label>label3</label>
+	    <justify>GTK_JUSTIFY_CENTER</justify>
+	    <wrap>False</wrap>
+	    <xalign>0.5</xalign>
+	    <yalign>0.5</yalign>
+	    <xpad>0</xpad>
+	    <ypad>0</ypad>
+	  </widget>
+	</widget>
+
+	<widget>
+	  <class>GtkFixed</class>
+	  <name>fixed2</name>
+	  <child>
+	    <padding>0</padding>
+	    <expand>True</expand>
+	    <fill>True</fill>
+	  </child>
+	</widget>
+
+	<widget>
+	  <class>GtkFixed</class>
+	  <name>fixed3</name>
+	  <child>
+	    <padding>0</padding>
+	    <expand>True</expand>
+	    <fill>True</fill>
+	  </child>
+	</widget>
+
+	<widget>
+	  <class>GtkFixed</class>
+	  <name>fixed4</name>
+	  <child>
+	    <padding>0</padding>
+	    <expand>True</expand>
+	    <fill>True</fill>
+	  </child>
+	</widget>
+      </widget>
+
+      <widget>
+	<class>GtkLabel</class>
+	<child_name>Notebook:tab</child_name>
+	<name>label1</name>
+	<label>label1</label>
+	<justify>GTK_JUSTIFY_CENTER</justify>
+	<wrap>False</wrap>
+	<xalign>0.5</xalign>
+	<yalign>0.5</yalign>
+	<xpad>0</xpad>
+	<ypad>0</ypad>
+      </widget>
+
+      <widget>
+	<class>Placeholder</class>
+      </widget>
+
+      <widget>
+	<class>GtkLabel</class>
+	<child_name>Notebook:tab</child_name>
+	<name>label2</name>
+	<label>label2</label>
+	<justify>GTK_JUSTIFY_CENTER</justify>
+	<wrap>False</wrap>
+	<xalign>0.5</xalign>
+	<yalign>0.5</yalign>
+	<xpad>0</xpad>
+	<ypad>0</ypad>
+      </widget>
+    </widget>
+
+    <widget>
+      <class>GtkHButtonBox</class>
+      <name>hbuttonbox1</name>
+      <layout_style>GTK_BUTTONBOX_DEFAULT_STYLE</layout_style>
+      <spacing>30</spacing>
+      <child_min_width>85</child_min_width>
+      <child_min_height>27</child_min_height>
+      <child_ipad_x>7</child_ipad_x>
+      <child_ipad_y>0</child_ipad_y>
+      <child>
+	<padding>0</padding>
+	<expand>True</expand>
+	<fill>True</fill>
+      </child>
+
+      <widget>
+	<class>GtkButton</class>
+	<name>button1</name>
+	<can_default>True</can_default>
+	<can_focus>True</can_focus>
+	<label>button1</label>
+      </widget>
+
+      <widget>
+	<class>GtkButton</class>
+	<name>button2</name>
+	<can_default>True</can_default>
+	<can_focus>True</can_focus>
+	<label>button2</label>
+      </widget>
+    </widget>
+
+    <widget>
+      <class>GtkScrolledWindow</class>
+      <name>scrolledwindow1</name>
+      <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
+      <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+      <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+      <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+      <child>
+	<padding>0</padding>
+	<expand>True</expand>
+	<fill>True</fill>
+      </child>
+
+      <widget>
+	<class>GtkText</class>
+	<name>text1</name>
+	<can_focus>True</can_focus>
+	<editable>False</editable>
+	<text></text>
+      </widget>
+    </widget>
+  </widget>
+</widget>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>window2</name>
+  <title>Create Tablespace</title>
+  <type>GTK_WINDOW_DIALOG</type>
+  <position>GTK_WIN_POS_CENTER</position>
+  <modal>False</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkVBox</class>
+    <name>vbox3</name>
+    <homogeneous>False</homogeneous>
+    <spacing>0</spacing>
+
+    <widget>
+      <class>GtkNotebook</class>
+      <name>notebook2</name>
+      <can_focus>True</can_focus>
+      <show_tabs>True</show_tabs>
+      <show_border>True</show_border>
+      <tab_pos>GTK_POS_TOP</tab_pos>
+      <scrollable>False</scrollable>
+      <tab_hborder>2</tab_hborder>
+      <tab_vborder>2</tab_vborder>
+      <popup_enable>False</popup_enable>
+      <child>
+	<padding>0</padding>
+	<expand>True</expand>
+	<fill>True</fill>
+      </child>
+
+      <widget>
+	<class>GtkFixed</class>
+	<name>fixed5</name>
+
+	<widget>
+	  <class>GtkEntry</class>
+	  <name>mmmentry2</name>
+	  <x>128</x>
+	  <y>8</y>
+	  <width>184</width>
+	  <height>24</height>
+	  <can_focus>True</can_focus>
+	  <signal>
+	    <name>changed</name>
+	    <handler>on_tsname_entry2_changed</handler>
+	    <last_modification_time>Wed, 09 Feb 2000 05:26:36 GMT</last_modification_time>
+	  </signal>
+	  <editable>True</editable>
+	  <text_visible>True</text_visible>
+	  <text_max_length>0</text_max_length>
+	  <text></text>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label6</name>
+	  <x>16</x>
+	  <y>8</y>
+	  <width>112</width>
+	  <height>24</height>
+	  <label>Tablespace Name:</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkCList</class>
+	  <name>mmmclist1</name>
+	  <x>16</x>
+	  <y>120</y>
+	  <width>232</width>
+	  <height>88</height>
+	  <can_focus>True</can_focus>
+	  <columns>3</columns>
+	  <column_widths>80,80,80</column_widths>
+	  <selection_mode>GTK_SELECTION_SINGLE</selection_mode>
+	  <show_titles>True</show_titles>
+	  <shadow_type>GTK_SHADOW_IN</shadow_type>
+
+	  <widget>
+	    <class>GtkLabel</class>
+	    <child_name>CList:title</child_name>
+	    <name>label7</name>
+	    <label>File Name</label>
+	    <justify>GTK_JUSTIFY_CENTER</justify>
+	    <wrap>False</wrap>
+	    <xalign>0.5</xalign>
+	    <yalign>0.5</yalign>
+	    <xpad>0</xpad>
+	    <ypad>0</ypad>
+	  </widget>
+
+	  <widget>
+	    <class>GtkLabel</class>
+	    <child_name>CList:title</child_name>
+	    <name>label8</name>
+	    <label>label8</label>
+	    <justify>GTK_JUSTIFY_CENTER</justify>
+	    <wrap>False</wrap>
+	    <xalign>0.5</xalign>
+	    <yalign>0.5</yalign>
+	    <xpad>0</xpad>
+	    <ypad>0</ypad>
+	  </widget>
+
+	  <widget>
+	    <class>GtkLabel</class>
+	    <child_name>CList:title</child_name>
+	    <name>label9</name>
+	    <label>label9</label>
+	    <justify>GTK_JUSTIFY_CENTER</justify>
+	    <wrap>False</wrap>
+	    <xalign>0.5</xalign>
+	    <yalign>0.5</yalign>
+	    <xpad>0</xpad>
+	    <ypad>0</ypad>
+	  </widget>
+	</widget>
+
+	<widget>
+	  <class>GtkButton</class>
+	  <name>button5</name>
+	  <x>256</x>
+	  <y>120</y>
+	  <width>55</width>
+	  <height>24</height>
+	  <can_focus>True</can_focus>
+	  <signal>
+	    <name>clicked</name>
+	    <handler>on_tsadd_button5_clicked</handler>
+	    <last_modification_time>Wed, 09 Feb 2000 05:29:39 GMT</last_modification_time>
+	  </signal>
+	  <label>Add</label>
+	</widget>
+
+	<widget>
+	  <class>GtkButton</class>
+	  <name>button6</name>
+	  <x>256</x>
+	  <y>152</y>
+	  <width>55</width>
+	  <height>24</height>
+	  <can_focus>True</can_focus>
+	  <signal>
+	    <name>clicked</name>
+	    <handler>on_tsremove_button6_clicked</handler>
+	    <last_modification_time>Wed, 09 Feb 2000 05:29:56 GMT</last_modification_time>
+	  </signal>
+	  <label>Remove</label>
+	</widget>
+
+	<widget>
+	  <class>GtkLabel</class>
+	  <name>label15</name>
+	  <x>16</x>
+	  <y>104</y>
+	  <width>80</width>
+	  <height>16</height>
+	  <label>Datafile Info:</label>
+	  <justify>GTK_JUSTIFY_LEFT</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	</widget>
+
+	<widget>
+	  <class>GtkFrame</class>
+	  <name>frame1</name>
+	  <x>16</x>
+	  <y>48</y>
+	  <width>296</width>
+	  <height>48</height>
+	  <label>Status</label>
+	  <label_xalign>0</label_xalign>
+	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+
+	  <widget>
+	    <class>GtkFixed</class>
+	    <name>fixed6</name>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton2</name>
+	      <x>184</x>
+	      <y>8</y>
+	      <width>93</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tsoffline_radiobutton2_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:27:48 GMT</last_modification_time>
+	      </signal>
+	      <label>Offline</label>
+	      <active>False</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g1</group>
+	    </widget>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton1</name>
+	      <x>16</x>
+	      <y>8</y>
+	      <width>93</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tsonline_radiobutton1_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:27:28 GMT</last_modification_time>
+	      </signal>
+	      <label>Online</label>
+	      <active>True</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g1</group>
+	    </widget>
+	  </widget>
+	</widget>
+
+	<widget>
+	  <class>GtkFrame</class>
+	  <name>frame2</name>
+	  <x>16</x>
+	  <y>232</y>
+	  <width>296</width>
+	  <height>48</height>
+	  <label>Type</label>
+	  <label_xalign>0</label_xalign>
+	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+
+	  <widget>
+	    <class>GtkFixed</class>
+	    <name>fixed7</name>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton3</name>
+	      <x>16</x>
+	      <y>0</y>
+	      <width>93</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tsperm_radiobutton3_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:31:05 GMT</last_modification_time>
+	      </signal>
+	      <label>Permanent</label>
+	      <active>True</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g2</group>
+	    </widget>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton4</name>
+	      <x>184</x>
+	      <y>0</y>
+	      <width>93</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tstemp_radiobutton4_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:31:21 GMT</last_modification_time>
+	      </signal>
+	      <label>Temporary</label>
+	      <active>False</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g2</group>
+	    </widget>
+	  </widget>
+	</widget>
+      </widget>
+
+      <widget>
+	<class>GtkLabel</class>
+	<child_name>Notebook:tab</child_name>
+	<name>label4</name>
+	<label>General</label>
+	<justify>GTK_JUSTIFY_CENTER</justify>
+	<wrap>False</wrap>
+	<xalign>0.5</xalign>
+	<yalign>0.5</yalign>
+	<xpad>0</xpad>
+	<ypad>0</ypad>
+      </widget>
+
+      <widget>
+	<class>GtkFixed</class>
+	<name>fixed8</name>
+
+	<widget>
+	  <class>GtkFrame</class>
+	  <name>frame3</name>
+	  <x>8</x>
+	  <y>24</y>
+	  <width>312</width>
+	  <height>240</height>
+	  <label_xalign>0</label_xalign>
+	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+
+	  <widget>
+	    <class>GtkFixed</class>
+	    <name>fixed9</name>
+
+	    <widget>
+	      <class>GtkEntry</class>
+	      <name>mmmentry3</name>
+	      <x>88</x>
+	      <y>8</y>
+	      <width>144</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>changed</name>
+		<handler>on_tsinitial_entry3_changed</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:36:20 GMT</last_modification_time>
+	      </signal>
+	      <editable>True</editable>
+	      <text_visible>True</text_visible>
+	      <text_max_length>0</text_max_length>
+	      <text></text>
+	    </widget>
+
+	    <widget>
+	      <class>GtkEntry</class>
+	      <name>mmmentry4</name>
+	      <x>88</x>
+	      <y>32</y>
+	      <width>144</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>changed</name>
+		<handler>on_tsnext_entry4_changed</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:36:34 GMT</last_modification_time>
+	      </signal>
+	      <editable>True</editable>
+	      <text_visible>True</text_visible>
+	      <text_max_length>0</text_max_length>
+	      <text></text>
+	    </widget>
+
+	    <widget>
+	      <class>GtkEntry</class>
+	      <name>mmmentry5</name>
+	      <x>88</x>
+	      <y>56</y>
+	      <width>144</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>changed</name>
+		<handler>on_tsmin_entry5_changed</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:37:01 GMT</last_modification_time>
+	      </signal>
+	      <editable>True</editable>
+	      <text_visible>True</text_visible>
+	      <text_max_length>0</text_max_length>
+	      <text></text>
+	    </widget>
+
+	    <widget>
+	      <class>GtkEntry</class>
+	      <name>mmmentry6</name>
+	      <x>88</x>
+	      <y>80</y>
+	      <width>144</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>changed</name>
+		<handler>on_tsinc_entry6_changed</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:37:19 GMT</last_modification_time>
+	      </signal>
+	      <editable>True</editable>
+	      <text_visible>True</text_visible>
+	      <text_max_length>0</text_max_length>
+	      <text></text>
+	    </widget>
+
+	    <widget>
+	      <class>GtkEntry</class>
+	      <name>mmmentry7</name>
+	      <x>88</x>
+	      <y>104</y>
+	      <width>144</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>changed</name>
+		<handler>on_tsmax_entry7_changed</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:37:45 GMT</last_modification_time>
+	      </signal>
+	      <editable>True</editable>
+	      <text_visible>True</text_visible>
+	      <text_max_length>0</text_max_length>
+	      <text></text>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <name>label10</name>
+	      <x>8</x>
+	      <y>8</y>
+	      <width>80</width>
+	      <height>24</height>
+	      <label>Initial Size:</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <name>label11</name>
+	      <x>8</x>
+	      <y>32</y>
+	      <width>80</width>
+	      <height>24</height>
+	      <label>Next Size:</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <name>label12</name>
+	      <x>8</x>
+	      <y>56</y>
+	      <width>80</width>
+	      <height>24</height>
+	      <label>Minimum Size:</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <name>label13</name>
+	      <x>8</x>
+	      <y>80</y>
+	      <width>80</width>
+	      <height>24</height>
+	      <label>Increment By:</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkLabel</class>
+	      <name>label14</name>
+	      <x>8</x>
+	      <y>104</y>
+	      <width>80</width>
+	      <height>24</height>
+	      <label>Max Number:</label>
+	      <justify>GTK_JUSTIFY_CENTER</justify>
+	      <wrap>False</wrap>
+	      <xalign>0.5</xalign>
+	      <yalign>0.5</yalign>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	    </widget>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton5</name>
+	      <x>240</x>
+	      <y>8</y>
+	      <width>32</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tsinitialk_radiobutton5_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:39:12 GMT</last_modification_time>
+	      </signal>
+	      <label>K</label>
+	      <active>True</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g3</group>
+	    </widget>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton6</name>
+	      <x>272</x>
+	      <y>8</y>
+	      <width>32</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tsinitialm_radiobutton6_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:39:27 GMT</last_modification_time>
+	      </signal>
+	      <label>M</label>
+	      <active>False</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g3</group>
+	    </widget>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton10</name>
+	      <x>272</x>
+	      <y>56</y>
+	      <width>32</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tsminm_radiobutton10_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:42:48 GMT</last_modification_time>
+	      </signal>
+	      <label>M</label>
+	      <active>False</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g5</group>
+	    </widget>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton9</name>
+	      <x>240</x>
+	      <y>56</y>
+	      <width>32</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tsmink_radiobutton9_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:42:34 GMT</last_modification_time>
+	      </signal>
+	      <label>K</label>
+	      <active>True</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g5</group>
+	    </widget>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton7</name>
+	      <x>240</x>
+	      <y>32</y>
+	      <width>32</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tsnextk_radiobutton7_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:40:07 GMT</last_modification_time>
+	      </signal>
+	      <label>K</label>
+	      <active>True</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g4</group>
+	    </widget>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>radiobutton8</name>
+	      <x>272</x>
+	      <y>32</y>
+	      <width>32</width>
+	      <height>24</height>
+	      <can_focus>True</can_focus>
+	      <signal>
+		<name>toggled</name>
+		<handler>on_tsnextm_radiobutton8_toggled</handler>
+		<last_modification_time>Wed, 09 Feb 2000 05:41:46 GMT</last_modification_time>
+	      </signal>
+	      <label>M</label>
+	      <active>False</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>g4</group>
+	    </widget>
+
+	    <widget>
+	      <class>GtkFrame</class>
+	      <name>frame4</name>
+	      <x>24</x>
+	      <y>144</y>
+	      <width>208</width>
+	      <height>72</height>
+	      <label>Max Number</label>
+	      <label_xalign>0</label_xalign>
+	      <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+
+	      <widget>
+		<class>GtkFixed</class>
+		<name>fixed10</name>
+
+		<widget>
+		  <class>GtkEntry</class>
+		  <name>mmmentry8</name>
+		  <x>112</x>
+		  <y>24</y>
+		  <width>86</width>
+		  <height>24</height>
+		  <can_focus>True</can_focus>
+		  <signal>
+		    <name>changed</name>
+		    <handler>on_tsfixedval_entry8_changed</handler>
+		    <last_modification_time>Wed, 09 Feb 2000 05:45:00 GMT</last_modification_time>
+		  </signal>
+		  <editable>True</editable>
+		  <text_visible>True</text_visible>
+		  <text_max_length>0</text_max_length>
+		  <text></text>
+		</widget>
+
+		<widget>
+		  <class>GtkRadioButton</class>
+		  <name>radiobutton11</name>
+		  <x>8</x>
+		  <y>0</y>
+		  <width>100</width>
+		  <height>24</height>
+		  <can_focus>True</can_focus>
+		  <signal>
+		    <name>toggled</name>
+		    <handler>on_tsunlimit_radiobutton11_toggled</handler>
+		    <last_modification_time>Wed, 09 Feb 2000 05:44:07 GMT</last_modification_time>
+		  </signal>
+		  <label>Unlimited</label>
+		  <active>True</active>
+		  <draw_indicator>True</draw_indicator>
+		  <group>g6</group>
+		</widget>
+
+		<widget>
+		  <class>GtkRadioButton</class>
+		  <name>radiobutton12</name>
+		  <x>8</x>
+		  <y>24</y>
+		  <width>94</width>
+		  <height>24</height>
+		  <can_focus>True</can_focus>
+		  <signal>
+		    <name>toggled</name>
+		    <handler>on_tsfixed_radiobutton12_toggled</handler>
+		    <last_modification_time>Wed, 09 Feb 2000 05:44:29 GMT</last_modification_time>
+		  </signal>
+		  <label>Fixed:</label>
+		  <active>False</active>
+		  <draw_indicator>True</draw_indicator>
+		  <group>g6</group>
+		</widget>
+	      </widget>
+	    </widget>
+	  </widget>
+	</widget>
+
+	<widget>
+	  <class>GtkCheckButton</class>
+	  <name>mmmcheckbutton1</name>
+	  <x>8</x>
+	  <y>0</y>
+	  <width>120</width>
+	  <height>24</height>
+	  <can_focus>True</can_focus>
+	  <signal>
+	    <name>toggled</name>
+	    <handler>on_tsoverride_checkbutton1_toggled</handler>
+	    <last_modification_time>Wed, 09 Feb 2000 05:33:59 GMT</last_modification_time>
+	  </signal>
+	  <label>Override Default</label>
+	  <active>False</active>
+	  <draw_indicator>True</draw_indicator>
+	</widget>
+      </widget>
+
+      <widget>
+	<class>GtkLabel</class>
+	<child_name>Notebook:tab</child_name>
+	<name>label5</name>
+	<label>Extents</label>
+	<justify>GTK_JUSTIFY_CENTER</justify>
+	<wrap>False</wrap>
+	<xalign>0.5</xalign>
+	<yalign>0.5</yalign>
+	<xpad>0</xpad>
+	<ypad>0</ypad>
+      </widget>
+    </widget>
+
+    <widget>
+      <class>GtkHButtonBox</class>
+      <name>hbuttonbox2</name>
+      <layout_style>GTK_BUTTONBOX_SPREAD</layout_style>
+      <spacing>30</spacing>
+      <child_min_width>85</child_min_width>
+      <child_min_height>27</child_min_height>
+      <child_ipad_x>7</child_ipad_x>
+      <child_ipad_y>0</child_ipad_y>
+      <child>
+	<padding>0</padding>
+	<expand>False</expand>
+	<fill>True</fill>
+      </child>
+
+      <widget>
+	<class>GtkButton</class>
+	<name>button3</name>
+	<can_default>True</can_default>
+	<can_focus>True</can_focus>
+	<signal>
+	  <name>clicked</name>
+	  <handler>on_tscreate_button3_clicked</handler>
+	  <last_modification_time>Wed, 09 Feb 2000 05:32:14 GMT</last_modification_time>
+	</signal>
+	<label>Create</label>
+      </widget>
+
+      <widget>
+	<class>GtkButton</class>
+	<name>button4</name>
+	<can_default>True</can_default>
+	<can_focus>True</can_focus>
+	<signal>
+	  <name>clicked</name>
+	  <handler>on_tscancel_button4_clicked</handler>
+	  <last_modification_time>Wed, 09 Feb 2000 05:32:36 GMT</last_modification_time>
+	</signal>
+	<label>Cancel</label>
+      </widget>
+    </widget>
+
+    <widget>
+      <class>GtkScrolledWindow</class>
+      <name>scrolledwindow2</name>
+      <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
+      <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+      <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+      <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+      <child>
+	<padding>0</padding>
+	<expand>True</expand>
+	<fill>True</fill>
+      </child>
+
+      <widget>
+	<class>GtkText</class>
+	<name>mmmtext2</name>
+	<can_focus>True</can_focus>
+	<editable>True</editable>
+	<text></text>
+      </widget>
+    </widget>
+  </widget>
+</widget>
+
+</GTK-Interface>

@@ -1,0 +1,20 @@
+Hello,
+
+  If you're reading this then you are thinking about 
+jacking with my syntax highlighting.  Well, it's about 
+time.  It's pretty bad.  I'd much rather write code than
+play with the tokens.  Anyway, here's the skinny on doing
+this highlighting thing:
+
+Edit the file plsql.s.  In there you will see the keywords
+organized like: 
+"keyword"   |
+
+Add additional keywords into an existing catagory.  That's
+the simplest solution.  Once finished run the ./buildscanner 
+script.  It will call ./scannertool, and then flex.  Once it's 
+finished you can do a 'make' to compile the library.  Once
+that's finished you can compile OM.
+
+Matthew
+

@@ -1,0 +1,43 @@
+#!/bin/sh
+echo "Oracle Install Sanity Checker" > report 2>&1
+echo >> report 2>&1
+echo >> report 2>&1
+
+echo "Machine Information" >> report 2>&1
+echo >> report 2>&1
+uname -a >> report 2>&1
+echo >> report 2>&1
+ls /lib/libc.* >> report 2>&1
+echo >> report 2>&1
+echo >> report 2>&1
+
+echo "Oracle Information" >> report 2>&1
+echo >> report 2>&1
+echo "Checking environment" >> report 2>&1
+echo "ORACLE_HOME=$ORACLE_HOME" >> report 2>&1
+echo "ORACLE_BASE=$ORACLE_BASE" >> report 2>&1
+echo "TNS_ADMIN=$TNS_ADMIN" >> report 2>&1
+echo >> report 2>&1
+echo "Looking for Oracle Libs" >> report 2>&1
+echo "Checking /usr/local/lib" >> report 2>&1
+ls /usr/local/lib/libclntsh* >> report 2>&1
+echo "Checking $ORACLE_HOME/lib" >> report 2>&1
+ls $ORACLE_HOME/lib/libclntsh* >> report 2>&1
+echo >> report 2>&1
+echo "Looking for tnsnames.ora" >> report 2>&1
+ls $TNS_ADMIN/tnsnames.ora >> report 2>&1
+ls /usr/local/share/orasoft/tnsnames.ora >> report 2>&1
+ls /etc/tnsnames.ora >> report 2>&1
+
+echo >> report 2>&1
+echo >> report 2>&1
+
+echo "Looking for Orasoft Stuff" >> report 2>&1
+echo >> report 2>&1
+echo "Checking $HOME" >> report 2>&1
+ls $HOME/.oralinux >> report 2>&1
+ls /usr/local/share/orasoft >> report 2>&1
+ls /usr/local/bin/objectman* >> report 2>&1
+ls /usr/local/bin/oman* >> report 2>&1
+ls /usr/local/bin/sqlwork >> report 2>&1
+

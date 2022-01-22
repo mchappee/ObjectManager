@@ -1,0 +1,10 @@
+To compile, type ./configure && make && make install
+If you have any problems, contact me at matthew@orasoft.org
+
+The installation creates the following files:
+
+/usr/local/bin/objectman
+
+make install will attempt to copy an executable to a bin directory.
+You must have proper access to do this.
+

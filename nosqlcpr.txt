@@ -1,0 +1,8 @@
+
+So, you don't have sqlcpr.h?  The configure script looked for it 
+in $ORACLE_HOME/precomp/public.  Usually this problem stems from 
+the fact that you did not install the developer's portion of the
+Oracle package.  Run orainst and select the Developer option.
+
+Matthew
+

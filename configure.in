@@ -1,0 +1,111 @@
+dnl Process this file with autoconf to produce a configure script.
+
+AC_INIT(configure.in)
+AM_INIT_AUTOMAKE(objectmanager, 2.0)
+AM_CONFIG_HEADER(config.h)
+
+AC_ISC_POSIX
+AC_PROG_CC
+AM_PROG_CC_STDC
+AC_HEADER_STDC
+
+AM_PATH_GTK(1.2.0, ,
+            AC_MSG_ERROR(Cannot find GTK: Is gtk-config in path?))
+
+dnl Add the languages which your application supports here.
+dnl ALL_LINGUAS=""
+dnl AM_GNU_GETTEXT
+
+dnl Set PACKAGE_LOCALE_DIR in config.h.
+if test "x${prefix}" = "xNONE"; then
+  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${ac_default_prefix}/${DATADIRNAME}/locale")
+else
+  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${prefix}/${DATADIRNAME}/locale")
+fi
+
+dnl Set PACKAGE_DATA_DIR in config.h.
+if test "x${datadir}" = 'x${prefix}/share'; then
+  if test "x${prefix}" = "xNONE"; then
+    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${ac_default_prefix}/share/${PACKAGE}")
+  else
+    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${prefix}/share/${PACKAGE}")
+  fi
+else
+  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${datadir}/${PACKAGE}")
+fi
+
+dnl Set PACKAGE_SOURCE_DIR in config.h.
+packagesrcdir=`cd $srcdir && pwd`
+AC_DEFINE_UNQUOTED(PACKAGE_SOURCE_DIR, "${packagesrcdir}")
+
+dnl Use -Wall if we have gcc.
+changequote(,)dnl
+if test "x$GCC" = "xyes"; then
+  case " $CFLAGS " in
+  *[\ \	]-Wall[\ \	]*) ;;
+  *) CFLAGS="$CFLAGS -Wall" ;;
+  esac
+fi
+changequote([,])dnl
+
+dnl Check to see if the user wishes to support queries on
+dnl Oracle databases
+AC_ARG_ENABLE(oracle,
+      [  --disable-oracle          Do not support Oracle databases],
+      USE_ORACLE=$enableval, USE_ORACLE=yes)
+
+AC_ARG_WITH(oracle, 
+      [  --with-oracle             Oracle home directory located in (val)],
+       ORACLE_DIR="$withval", ORACLE_DIR=no)
+
+if test x"$USE_ORACLE" = x"yes" ; then
+    AC_MSG_CHECKING([for Oracle 8.0 or 8.1])
+    
+    if test "${ORACLE_DIR}" != "no" && test -d $ORACLE_DIR/lib && 
+       test -f $ORACLE_DIR/rdbms/demo/oci.h; then
+	 ORACLE_DIR="$ORACLE_DIR"
+    elif test -n $ORACLE_HOME && test -d $ORACLE_HOME/lib &&
+       test -f $ORACLE_HOME/rdbms/demo/oci.h; then
+	 ORACLE_DIR="$ORACLE_HOME"
+    else
+      AC_MSG_ERROR([Could not locate Oracle libraries!])
+    fi
+    AC_MSG_RESULT($ORACLE_DIR)
+    DBINC="${DBINC} -I${ORACLE_DIR}/rdbms/demo -I${ORACLE_DIR}/network/public"
+    DBSRC="${DBSRC} oracledb.c oracle.h"
+
+    # Get Oracle version
+    ORACLE_VERSION='Unknown'
+changequote(,)dnl
+    for str in `echo exit | TWO_TASK="" ${ORACLE_DIR}/bin/svrmgrl | awk '/^Oracle8/'`; do
+        tmpstr=`echo "$str" | grep "^[0-9]"`
+        if test "$tmpstr" != ""  ; then
+            ORACLE_VERSION="$str"
+            break
+        fi
+    done
+changequote([,])dnl
+
+    case ${ORACLE_VERSION} in
+	8.1.* ) DBLIBS="${DBLIBS} -L${ORACLE_DIR}/lib -lclntsh" 
+	 	;;
+	8.0.* ) DBLIBS="${DBLIBS} -L${ORACLE_DIR}/lib ${ORACLE_DIR}/lib/scorept.o -lclntsh -lcore4 -lnlsrtl3" 
+		DBINC="${DBINC} -I${ORACLE_DIR}/plsql/public" 
+		;;
+        *     ) AC_MSG_WARN([Unsupported Oracle version ${ORACLE_VERSION}!])
+		;;
+    esac
+    DBDEFS="${DBDEFS} -DORACLE_VERSION="`echo $ORACLE_VERSION | awk -F. '{printf "%d%02d%02d", $1, $2, $3}'`
+fi
+
+
+AC_SUBST(DBINC)
+AC_SUBST(DBLIBS)
+AC_SUBST(DBSRC)
+AC_SUBST(DBDEFS)
+
+AC_OUTPUT([
+Makefile
+gtkeditor/Makefile
+])
+

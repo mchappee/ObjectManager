@@ -1,0 +1,30 @@
+CC = @CC@
+GTK_CFLAGS = @GTK_CFLAGS@
+GTK_CONFIG = @GTK_CONFIG@
+GTK_LIBS   = @GTK_LIBS@
+
+first_target: all
+all:	
+	$(CC) -c edit.c $(GTK_CFLAGS)
+	$(CC) -c gtkeditor.c $(GTK_CFLAGS)
+	$(CC) -c highlight.c $(GTK_CFLAGS)
+	$(CC) -c plsql.c $(GTK_CFLAGS)
+	$(CC) -c scanner.c $(GTK_CFLAGS)
+	$(CC) -c orasoft_gtkeditor.c $(GTK_CFLAGS)
+	ar rcs libgtkeditor.a edit.o gtkeditor.o highlight.o plsql.o scanner.o orasoft_gtkeditor.o
+	chmod 755 libgtkeditor.a
+objectman:
+	$(CC) -c edit.c $(GTK_CFLAGS)
+	$(CC) -c gtkeditor.c $(GTK_CFLAGS)
+	$(CC) -c highlight.c $(GTK_CFLAGS)
+	$(CC) -c plsql.c $(GTK_CFLAGS)
+	$(CC) -c scanner.c $(GTK_CFLAGS)
+	$(CC) -c orasoft_gtkeditor.c $(GTK_CFLAGS)
+	ar rcs libgtkeditor.a edit.o gtkeditor.o highlight.o plsql.o scanner.o orasoft_gtkeditor.o
+	chmod 755 libgtkeditor.a
+
+clean:	
+	rm *.o *.a
+
+install:
+	@echo Installing

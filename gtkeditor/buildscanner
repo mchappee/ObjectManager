@@ -1,0 +1,5 @@
+echo "Creating .l flex file"
+./scannertool plsql.s plsql.l
+echo "Running Flex"
+flex -i -oplsql.c plsql.l
+echo ".c File Created, Go To Town"
